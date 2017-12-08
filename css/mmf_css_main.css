@@ -1,0 +1,1015 @@
+/****************************
+	Author: vyom chhabra
+	Date  : 09/27/2017
+*****************************/
+
+/****************************
+Extra Data
+*****************************/
+@-ms-viewport{
+	width: device-width;
+	height: device-height;
+}
+
+a{
+	transition: color 1.0s ease;
+}
+
+#sample {
+	width: 100%;
+}
+
+a:link {
+    text-decoration: none;
+	color: rgba(180,180,180,1);
+}
+
+a:visited {
+    text-decoration: none;
+	color: rgba(180,180,180,1);
+}
+
+a:hover {
+    text-decoration: none;
+	color: rgba(10,10,10,1);
+}
+
+a:active {
+    text-decoration: none;
+	color: rgba(180,180,180,1);
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	-webkit-text-size-adjust: auto;
+	-moz-text-size-adjust: auto;
+	text-size-adjust: auto;
+	font-family: "Microsoft Sans Serif","Verdana","Lucida Sans Unicode";
+    overflow:auto;
+}
+/* Tooltip container */
+.mmf_mb_index {
+    display: block;
+}
+
+/* Tooltip text */
+.mmf_mb_index .tooltiptext {
+    display: block;
+	width: 200px;
+    visibility: hidden;
+    background-color: rgba(0,0,0,1);
+	color: rgba(180,180,180,1);
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    top: 110%;
+    left: -50%; 
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 5;
+}
+
+.mmf_mb_index .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 25%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.mmf_mb_index:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* landscape */
+@media only screen and (min-width: 800px) and (orientation: landscape) {
+	/* landscape-specific styles */
+	
+/****************************
+Main Body Data
+*****************************/
+div.mmf_back {
+	background-color: rgba(240,240,240,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	min-width:800px;
+	min-height:700px;
+    overflow:hidden;
+}
+
+div.mmf_back_view {
+	background-image: url('http://www.massmetalform.com/img/mmf_bg.jpg');
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+	
+div.mmf_menu_bar {
+    display: block;
+	position: absolute;
+	margin: 0;
+	width: 150px;
+	height: 100%;
+	min-height:700px;
+	text-align:center;
+	background-color: rgba(40,40,40,1);
+	background-size: 100% 100%;	
+}
+
+div.mmf_title_bar {
+    display: block;
+	position: absolute;
+	margin: 0;
+	width: 100%;
+	min-width:800px;
+}
+
+div.mmf_body_content {
+    display: block;
+	position: absolute;
+	margin: 90px 0 0 150px;
+	width: -webkit-calc(100vw - 140px);
+	width: -moz-calc(100vw - 140px);
+	width: calc(100vw - 140px);
+	height: -webkit-calc(100vh - 180px);
+	height: -moz-calc(100vh - 180px);
+	height: calc(100vh - 180px);
+	min-width:650px;
+	min-height:620px;
+	color: rgba(180,180,180,1);
+	text-align: center;
+    overflow:auto;
+}
+
+div.mmf_body_work {
+    display: block;
+	position: absolute;
+	margin: 90px 0 0 160px;
+	width: -webkit-calc(100vw - 160px);
+	width: -moz-calc(100vw - 160px);
+	width: calc(100vw - 160px);
+	height: -webkit-calc(100vh - 180px);
+	height: -moz-calc(100vh - 180px);
+	height: calc(100vh - 180px);
+	color: rgba(180,180,180,1);
+	min-width:640px;
+	min-height:620px;
+	text-align: center;
+    overflow:auto;
+}
+
+div.mmf_iso {
+    display: block;
+	position: absolute;
+	background-image: url('../img/mmf_iso.png');
+	background-size: 100% 100%;
+	margin: -webkit-calc(100vh - 40px) 0 0 -webkit-calc(100vw - 120px);
+	margin: -moz-calc(100vh - 40px) 0 0 -moz-calc(100vw - 120px);
+	margin: calc(100vh - 40px) 0 0 calc(100vw - 120px);
+	width: 100px;
+	height:30px;
+}
+
+#mmf_mb_menu_btn {
+	display: none;
+}
+/****************************
+Animation Data
+*****************************/
+div.mmf_ani_slide {
+  	-webkit-animation-name: mmf_ani_slide;
+	-webkit-animation-duration: 1.8s;
+  	animation-name: mmf_ani_slide;
+ 	animation-duration: 1.8s;
+}
+
+@-webkit-keyframes mmf_ani_slide {
+	from {transform: translateY(100%);} 
+	to {transform: translateY(0%);}
+}
+
+@keyframes mmf_ani_slide {
+	from {transform: translateY(100%);} 
+	to {transform: translateY(0%);}
+}
+
+/****************************
+Titlebar Data
+*****************************/
+span.mmf_tb_head_001 {
+	cursor:pointer;
+	padding: 10px 0;
+	width: 150px;
+	font-size: 40px;
+	margin: auto;
+	display: inline-block;
+	position: relative;
+	color: rgba(180,180,180,1);
+	text-align: center;
+}
+
+span.mmf_tb_head_002 {
+	cursor:pointer;
+	padding: 10px 0;
+	font-size: 40px;
+	display: inline-block;
+	position: relative;
+	color: rgba(80,80,80,1);
+}
+
+span.mmf_tb_tag {
+	cursor:pointer;
+	padding: 20px;
+	font-size: 20px;
+	float: right;
+	display: inline-block;
+	position: relative;
+	color: rgba(80,80,80,1);
+	font-style: italic;
+}
+/****************************
+Menubar Data
+*****************************/
+span.mmf_mb_index {
+	cursor:pointer;
+	height: 50px;
+	width: 50px;
+	display: block;
+	margin: 50px auto;
+	transition: background-image 1.0s ease, left 1.0s ease;
+	position: relative;
+	color: rgba(180,180,180,1);
+	background-size: 100% 100%;
+}
+
+#mmf_mb_index_001 {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_001.png");
+}
+#mmf_mb_index_001:hover {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_005.png");
+}
+
+#mmf_mb_index_002 {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_002.png");
+}
+#mmf_mb_index_002:hover {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_006.png");
+}
+
+#mmf_mb_index_003 {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_003.png");
+}
+#mmf_mb_index_003:hover {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_007.png");
+}
+
+#mmf_mb_index_004 {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_004.png");
+}
+#mmf_mb_index_004:hover {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_008.png");
+}
+
+span.mmf_mb_index:hover {
+	left: 0vw;
+}
+
+div.mmf_mb_icons {
+    display: block;
+	position: absolute;
+	width: 150px;
+	margin: -webkit-calc(50vh - 300px) 0 0 0;
+	margin: -moz-calc(50vh - 300px) 0 0 0;
+	margin: calc(50vh - 300px) 0 0 0;
+}
+
+div.mmf_mb_footer {
+    display: block;
+	position: absolute;
+	padding: 40px 0;
+	width: 150px;
+	bottom: 0;
+    overflow: hidden;
+	text-align: center;
+}
+
+span.mmf_mb_footer_copy {
+	font-size: 15px;
+	color: rgba(180,180,180,1);
+}
+
+/****************************
+Body Content Data
+*****************************/
+#mmf_bc_data {
+    display: block;
+	position: relative;
+	padding: 50px;
+	min-height: 30vh;
+	max-width: 100%;
+    overflow: auto;
+	text-align: center;
+	font-size: 30px;
+	color: rgba(240,240,240,1);
+}
+
+div.mmf_bc_buttons {
+    display: block;
+	position: relative;
+	padding: 40px 0;
+	width: 100%;
+    overflow: hidden;
+	text-align: center;
+}
+
+div.mmf_bc_btn_data {
+    display: inline-block;
+	position: relative;
+	padding: 20px;
+	min-width: 100px;
+    overflow: hidden;
+	text-align: center;
+	margin: auto;
+	border-radius: 30px;
+	font-size: 30px;
+	color: rgba(240,240,240,1);
+	background-border: solid rgba(40,40,40,1);
+	color: rgba(40,40,40,1);
+	background-size: 100% 100%;
+	transition: background-color 1s ease, border 1s ease, color 1s ease;
+	cursor: pointer;
+}
+
+div.mmf_bc_btn_data:hover {
+	border: solid rgba(240,240,240,1);
+	background-color: rgba(240,240,240,1);
+	color: rgba(40,40,40,1);
+	background-size: 100% 100%;
+}
+
+span.mmf_bc_form {
+	font-size: 30px;
+	color: rgba(40,40,40,1);
+}
+
+div.mmf_bc_data {
+    display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(40,40,40,1);
+	background-size: 100% 100%;
+	text-align: right;
+}
+
+div.mmf_bc_col {
+    display: inline-block;
+	position: relative;
+	margin: 0;
+	width: 32%;
+	height: 100%;
+	color: rgba(180,180,180,1);
+	text-align: center;
+}
+
+div.mmf_bc_col_border {
+	border-right: solid rgba(180,180,180,1);
+}
+
+div.mmf_bc_col_001_dat {
+    display: block;
+	position: absolute;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	color: rgba(180,180,180,1);
+	text-align: center;
+    overflow: auto;
+}
+
+div.mmf_bc_col_001_row {
+	cursor:pointer;
+    display: block;
+	position: relative;
+	margin: 5px auto;
+	width: 100%;
+	padding: 80px 0;
+	font-size: 40px;
+	color: rgba(180,180,180,1);
+	text-align: center;
+}
+
+div.mmf_bc_col_002_dat {
+    display: none;
+	position: absolute;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	color: rgba(180,180,180,1);
+	text-align: center;
+    overflow: auto;
+}
+
+div.mmf_bc_col_002_row {
+	cursor:pointer;
+    display: block;
+	position: relative;
+	margin: 5px auto;
+	width: 100%;
+	padding: 20px 0;
+	font-size: 20px;
+	color: rgba(180,180,180,1);
+	text-align: center;
+}
+
+div.mmf_bc_col_003_dat {
+    display: none;
+	position: absolute;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	color: rgba(180,180,180,1);
+	text-align: left;
+    overflow: auto;
+}
+
+div.mmf_bc_col_001_row:hover, div.mmf_bc_col_002_row:hover, div.mmf_bc_col_003_row:hover {
+	background-color: rgba(240,240,240,1);
+	color: rgba(40,40,40,1);
+}
+/****************************
+Table Data
+*****************************/
+table.mmf_bc_form {
+	width: 70vw;
+	min-width: 640px;
+	margin: auto;
+	text-align: center;
+	font-size: 20px;
+	padding: 5px 0;
+	display: inline-block;
+	color: rgba(40,40,40,1);
+}
+
+table.mmf_bc_form th {
+	width: 20vw;
+	min-width: 140px;
+	margin: auto;
+	text-align: center;
+	text-decoration: none;
+}
+
+table.mmf_bc_form td {
+	width: 50vw;
+	min-width: 400px;
+	margin: auto;
+}
+/****************************
+Form Data
+*****************************/
+input[type=text], input[type=email], input[type=tel], input[type=submit], select, textarea {
+    width: -webkit-calc(100% - 40px);
+    width: -moz-calc(100% - 40px);
+    width: calc(100% - 40px);
+    display: inline-block;
+	position: relative;
+    border: 0;
+    border-radius: 15px;
+	padding: 15px;
+	text-indent: 10px;
+	font-size: 30px;
+    background-color: rgba(220,220,220,.8);
+}
+select {
+    width: 100%;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: rgba(40,40,40,1);
+    color: white;
+    cursor: pointer;
+}
+textarea {
+	height: 220px;
+}
+
+select:focus {
+	transition: color 1.0s ease;
+	transition: background-color 1.0s ease;
+    background-color: rgba(90,90,90,.8);
+    color: rgba(230,230,230,.8);
+}
+textarea:focus {
+	transition: color 1.0s ease;
+	transition: background-color 1.0s ease;
+    background-color: rgba(90,90,90,.8);
+    color: rgba(230,230,230,.8);
+}
+input[type=submit]:hover {
+	transition: color 1.0s ease;
+	transition: background-color 1.0s ease;
+    background-color: rgba(140,140,140,1);
+}
+
+input:focus {
+	transition: color 1.0s ease;
+	transition: background-color 1.0s ease;
+	background-color: rgba(140,140,140,1);
+}
+
+
+/****************************
+Overload Data
+*****************************/
+@media only screen and (max-width: 1200px) {
+  /* For lowest resolution layouts */
+	span.mmf_tb_tag {
+		font-size: 12px;
+	}
+	div.mmf_iso {
+		display: none;
+	}
+	div.mmf_body_content {
+		height: -webkit-calc(100vh - 100px);
+		height: -moz-calc(100vh - 100px);
+		height: calc(100vh - 100px);
+	}
+}
+
+@media only screen and (max-height: 750px) {
+  /* For lowest resolution layouts */  
+	div.mmf_mb_icons {
+		margin-top: 100px;
+	}
+	div.mmf_iso {
+		display: none;
+	}
+	div.mmf_bc_btn_data {
+		font-size: 20px;
+	}
+	#mmf_bc_data{
+		font-size: 20px;
+	}
+}
+
+}
+
+
+/* <800px */
+@media only screen and (max-width: 800px) {
+	/* portrait-specific styles */
+
+/****************************
+Main Body Data
+*****************************/
+div.mmf_back {
+	background-color: rgba(240,240,240,1);
+	background-size: 100% 100%;	
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+div.mmf_back_view {
+	background-color: rgba(240,240,240,1);
+	background-size: 100% 100%;
+	width: 100%;
+	height: 100%;
+}
+	
+div.mmf_menu_bar {
+    display: block;
+	position: absolute;
+	width: 100vw;
+	height: 20vw;
+	left:-100vw;
+	text-align:center;
+	background-color: rgba(40,40,40,1);
+	background-size: 100% 100%;
+	z-index: 1;
+	transition: left 1.0s ease;
+	border-top: solid rgba(180,180,180,1);
+	border-bottom: solid rgba(180,180,180,1);
+	
+}
+
+div.mmf_title_bar {
+    display: block;
+	position: relative;
+	margin: 0;
+	width: 100%;
+	background-color: rgba(40,40,40,1);
+	background-size: 100% 100%;	
+	color: rgba(180,180,180,1);
+	text-align: center;
+	z-index: 0;
+}
+
+div.mmf_body_content {
+    display: block;
+	position: relative;
+	margin: 1vw 0 0 0;
+	width: 100%;
+	color: rgba(180,180,180,1);
+	text-align: center;
+    overflow:none;
+	z-index: 0;
+}
+
+div.mmf_body_work {
+    display: block;
+	position: relative;
+	margin: 1vw 0 0 0;
+	width: 100%;
+	color: rgba(180,180,180,1);
+	text-align: center;
+    overflow:none;
+	z-index: 0;
+}
+
+div.mmf_iso {
+    display: none;
+	position: absolute;
+	background-image: url('../img/mmf_iso.png');
+	background-size: 100% 100%;
+	margin: -webkit-calc(100vh - 40px) 0 0 -webkit-calc(100vw - 120px);
+	margin: -moz-calc(100vh - 40px) 0 0 -moz-calc(100vw - 120px);
+	margin: calc(100vh - 40px) 0 0 calc(100vw - 120px);
+	width: 100px;
+	height:30px;
+}
+
+#mmf_mb_menu_btn {
+	cursor:pointer;
+	font-size: 10vw;
+	display: block;
+	position: absolute;
+	float: left;
+	z-index:2;
+	margin: 3vw 0 0 0;
+	color: rgba(180,180,180,1);
+	text-align: center;
+}
+#mmf_mb_menu_btn:hover {
+	color: rgba(240,240,240,1);
+}
+/****************************
+Animation Data
+*****************************/
+div.mmf_ani_slide {
+  	-webkit-animation-name: mmf_ani_slide;
+	-webkit-animation-duration: 1.8s;
+  	animation-name: mmf_ani_slide;
+ 	animation-duration: 1.8s;
+}
+
+@-webkit-keyframes mmf_ani_slide {
+	from {transform: translateX(100%);} 
+	to {transform: translateX(0%);}
+}
+
+@keyframes mmf_ani_slide {
+	from {transform: translateX(100%);} 
+	to {transform: translateX(0%);}
+}
+
+/****************************
+Titlebar Data
+*****************************/
+span.mmf_tb_head_001 {
+	cursor:pointer;
+	padding: 5vw 0;
+	font-size: 8vw;
+	margin: auto;
+	display: inline-block;
+	position: relative;
+}
+
+span.mmf_tb_head_002 {
+	cursor:pointer;
+	padding: 5vw 0;
+	font-size: 8vw;
+	display: inline-block;
+	position: relative;
+	color: rgba(100,100,100,1);
+}
+
+span.mmf_tb_tag {
+	cursor:pointer;
+	padding: 3vw;
+	font-size: 3vw;
+	display: block;
+	position: relative;
+	font-style: italic;
+}
+/****************************
+Menubar Data
+*****************************/
+span.mmf_mb_index {
+	cursor:pointer;
+	height: 5vw;
+	font-size: 5vw;
+	width: 5vw;
+	display: inline-block;
+	margin: 7.5vw 5vw;
+	transition: background-image 1.0s ease, left 1.0s ease;
+	position: relative;
+	color: rgba(180,180,180,1);
+	background-size: 100% 100%;
+}
+
+#mmf_mb_index_001 {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_001.png");
+}
+#mmf_mb_index_001:hover {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_005.png");
+}
+
+#mmf_mb_index_002 {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_002.png");
+}
+#mmf_mb_index_002:hover {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_006.png");
+}
+
+#mmf_mb_index_003 {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_003.png");
+}
+#mmf_mb_index_003:hover {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_007.png");
+}
+
+#mmf_mb_index_004 {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_004.png");
+}
+#mmf_mb_index_004:hover {
+	background-image:url("http://www.massmetalform.com/img/mmf_icon_008.png");
+}
+
+span.mmf_mb_index:hover {
+	left: 0vw;
+}
+
+div.mmf_mb_icons {
+    display: block;
+	position: relative;
+	width: 100%;
+	color: rgba(180,180,180,1);
+}
+
+div.mmf_mb_curr {    
+	border: solied rgba(180,180,180,1);
+}
+
+div.mmf_mb_footer {
+    display: none;
+}
+
+span.mmf_mb_footer_copy {
+	font-size: 15px;
+	color: rgba(180,180,180,1);
+}
+
+/****************************
+Body Content Data
+*****************************/
+#mmf_bc_data {
+	float: top;
+    display: inline-block;
+	position: relative;
+	width: 45vw;
+    margin: auto;
+	text-align: center;
+	font-size: 3vw;
+	color: rgba(40,40,40,1);
+	vertical-align: top;
+}
+
+div.mmf_bc_buttons {
+	float: top;
+    display: inline-block;
+	position: relative;
+	margin: auto;
+	width: 45vw;
+    overflow: hidden;
+	text-align: center;
+	vertical-align: top;
+}
+
+div.mmf_bc_btn_data {
+    display: inline-block;
+	position: relative;
+	padding: 5vw;
+	width: 30vw;
+    overflow: hidden;
+	text-align: center;
+	margin: auto;
+	border: solid rgba(40,40,40,1);
+	color: rgba(40,40,40,1);
+	border-radius: 8vw;
+	font-size: 3vw;
+	background-color: rgba(240,240,240,1);
+	background-size: 100% 100%;
+	transition: background-color 1s ease, border 1s ease, color 1s ease;
+	cursor: pointer;
+}
+
+div.mmf_bc_btn_data:hover {
+	border: solid rgba(240,240,240,1);
+	color: rgba(240,240,240,1);
+	background-color: rgba(40,40,40,1);
+	background-size: 100% 100%;
+}
+
+span.mmf_bc_form {
+	font-size: 3vw;
+	color: rgba(40,40,40,1);
+}
+
+div.mmf_bc_data {
+    display: block;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: right;
+}
+
+div.mmf_bc_col {
+    display: block;
+	position: relative;
+	margin: 0;
+	width: 100vw;
+	height: 16vw;
+	color: rgba(180,180,180,1);
+	text-align: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+div.mmf_bc_col_pot {
+	height: calc(100vh - 63vw);
+}
+
+
+div.mmf_bc_col_border {
+	background-color: rgba(240,240,240,1);
+	background-size: 100% 100%;
+	border-bottom: solid rgba(180,180,180,1);
+}
+
+iframe {
+	min-height: -webkit-calc(100vh - 40vw);
+	min-height: -moz-calc(100vh - 40vw);
+	min-height: calc(100vh - 40vw);
+}
+
+div.mmf_bc_col_001_dat {
+    display: block;
+	position: absolute;
+	margin: auto;
+	width: 100vw;
+	height: 20vw;
+	color: rgba(180,180,180,1);
+	text-align: center;
+    overflow: hidden;
+}
+
+div.mmf_bc_col_001_row {
+	cursor:pointer;
+    display: inline-block;
+	position: relative;
+	margin: auto;
+	width: 40vw;
+	padding: 5vw 0;
+	font-size: 4vw;
+	color: rgba(80,80,80,1);
+	text-align: center;
+	border: solid rgba(40,40,40,1);
+	border-radius: 10vw;
+}
+
+div.mmf_bc_col_002_dat {
+    display: none;
+	position: absolute;
+	margin: auto;
+	height: 15vw;
+	color: rgba(180,180,180,1);
+	text-align: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+div.mmf_bc_col_002_dat_wide1 {
+	width: 255vw;
+}
+
+div.mmf_bc_col_002_dat_wide2 {
+	width: 130vw;
+}
+
+div.mmf_bc_col_002_row {
+	cursor:pointer;
+    display: inline-block;
+	position: relative;
+	margin: auto;
+	float:bottom;
+	width: 40vw;
+	height: 3vw;
+	padding: 5vw 0;
+	font-size: 3vw;
+	color: rgba(80,80,80,1);
+	text-align: center;
+	border: solid rgba(40,40,40,1);
+	border-radius: 10vw;
+}
+
+div.mmf_bc_col_003_dat {
+    display: none;
+	position: absolute;
+	margin: auto;
+	width: 100%;
+	height: 100%;
+	color: rgba(80,80,80,1);
+	text-align: left;
+    overflow: auto;
+	font-size: 3vw;
+}
+
+div.mmf_bc_col_001_row:hover, div.mmf_bc_col_002_row:hover, div.mmf_bc_col_003_row:hover {
+	color: rgba(240,240,240,1);
+	background-color: rgba(40,40,40,1);
+}
+/****************************
+Table Data
+*****************************/
+table.mmf_bc_form {
+	width: 90vw;
+	margin: auto;
+	text-align: center;
+	font-size: 3vw;
+	padding: 1vw 0;
+	display: inline-block;
+	color: rgba(40,40,40,1);
+}
+
+table.mmf_bc_form th {
+	width: 30vw;
+	margin: auto;
+	text-align: center;
+	text-decoration: none;
+}
+
+table.mmf_bc_form td {
+	width: 60vw;
+	margin: auto;
+}
+/****************************
+Form Data
+*****************************/
+input[type=text], input[type=email], input[type=tel], input[type=submit], select, textarea {
+    width: -webkit-calc(100% - 4vw);
+    width: -moz-calc(100% - 4vw);
+    width: calc(100% - 4vw);
+    display: inline-block;
+	position: relative;
+    border: 0;
+    border-radius: 2vw;
+	padding: 2vw;
+	text-indent: 2vw;
+	font-size: 3vw;
+    background-color: rgba(220,220,220,1);
+	transition: color 1.0s ease, background-color 1.0s ease;
+}
+select {
+    width: 100%;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: rgba(40,40,40,1);
+    color: white;
+    cursor: pointer;
+}
+textarea {
+	height: 220px;
+}
+
+select:focus, input[type=submit]:hover, input:focus, textarea:focus{
+    background-color: rgba(90,90,90,1);
+    color: rgba(230,230,230,1);
+}
+
+}
