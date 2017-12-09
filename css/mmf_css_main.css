@@ -17,6 +17,7 @@ a{
 
 #sample {
 	width: 100%;
+    height: auto;
 }
 
 a:link {
@@ -344,15 +345,15 @@ div.mmf_bc_btn_data {
 	border-radius: 30px;
 	font-size: 30px;
 	color: rgba(240,240,240,1);
-	background-border: solid rgba(40,40,40,1);
-	color: rgba(40,40,40,1);
+	border: solid rgba(240,240,240,1);
+	background-color: rgba(40,40,40,1);
 	background-size: 100% 100%;
 	transition: background-color 1s ease, border 1s ease, color 1s ease;
 	cursor: pointer;
 }
 
 div.mmf_bc_btn_data:hover {
-	border: solid rgba(240,240,240,1);
+	border: solid rgba(40,40,40,1);
 	background-color: rgba(240,240,240,1);
 	color: rgba(40,40,40,1);
 	background-size: 100% 100%;
@@ -835,6 +836,11 @@ div.mmf_bc_btn_data:hover {
 	background-size: 100% 100%;
 }
 
+#sample {
+	width: 50%;
+    height: auto;
+}
+
 span.mmf_bc_form {
 	font-size: 3vw;
 	color: rgba(40,40,40,1);
@@ -848,12 +854,16 @@ div.mmf_bc_data {
 	text-align: right;
 }
 
+div.mmf_bc_data_index {
+	margin: 10vw 0 auto;
+}
+
 div.mmf_bc_col {
     display: block;
 	position: relative;
 	margin: 0;
 	width: 100vw;
-	height: 16vw;
+	height: 22vw;
 	color: rgba(180,180,180,1);
 	text-align: center;
     overflow-x: auto;
@@ -861,7 +871,9 @@ div.mmf_bc_col {
 }
 
 div.mmf_bc_col_pot {
-	height: calc(100vh - 63vw);
+	min-height: -webkit-calc(100vh - 63vw);
+	min-height: -moz-calc(100vh - 63vw);
+	min-height: calc(100vh - 63vw);
 }
 
 
@@ -880,9 +892,9 @@ iframe {
 div.mmf_bc_col_001_dat {
     display: block;
 	position: absolute;
-	margin: auto;
+	margin: 2vw auto;
 	width: 100vw;
-	height: 20vw;
+	height: 17vw;
 	color: rgba(180,180,180,1);
 	text-align: center;
     overflow: hidden;
@@ -905,7 +917,7 @@ div.mmf_bc_col_001_row {
 div.mmf_bc_col_002_dat {
     display: none;
 	position: absolute;
-	margin: auto;
+	margin: 3vw auto;
 	height: 15vw;
 	color: rgba(180,180,180,1);
 	text-align: center;
@@ -914,11 +926,11 @@ div.mmf_bc_col_002_dat {
 }
 
 div.mmf_bc_col_002_dat_wide1 {
-	width: 255vw;
+	width: 300vw;
 }
 
 div.mmf_bc_col_002_dat_wide2 {
-	width: 130vw;
+	width: 150vw;
 }
 
 div.mmf_bc_col_002_row {
@@ -927,7 +939,7 @@ div.mmf_bc_col_002_row {
 	position: relative;
 	margin: auto;
 	float:bottom;
-	width: 40vw;
+	width: 45vw;
 	height: 3vw;
 	padding: 5vw 0;
 	font-size: 3vw;
@@ -944,7 +956,7 @@ div.mmf_bc_col_003_dat {
 	width: 100%;
 	height: 100%;
 	color: rgba(80,80,80,1);
-	text-align: left;
+	text-align: center;
     overflow: auto;
 	font-size: 3vw;
 }
