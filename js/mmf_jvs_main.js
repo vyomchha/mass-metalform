@@ -1,6 +1,53 @@
-//Change Home Page text datavar sld = 2;
+var sld = 2;
 var def_ind = 0;
-var timer = new Timer(function() {change_index(1);}, 5000);
+var timer = new Timer(function() {change_index(1);}, 10000);
+var mm_wd = window.matchMedia( "(min-width: 800px)" );
+var menu = false;
+
+mm_wd.addListener(function(mmwd) {
+	if(mmwd.matches) {
+		// Changed to width<800px
+		var mmf_menu = document.getElementsByClassName("mmf_menu_bar");
+		mmf_menu[0].style.left = '0vw';menu = true;
+	}
+	else {
+		// Changed to width>=800px
+		var mmf_menu = document.getElementsByClassName("mmf_menu_bar");
+		mmf_menu[0].style.left = '-100vw';menu = false;
+	}
+});
+
+//Work page show column 2
+function change_col2(n) {
+	var bd_mmf_image = document.getElementsByClassName("mmf_bc_col_002_dat");
+	for (i = 0; i < bd_mmf_image.length; i++) {
+	  	bd_mmf_image[i].style.display = "none";
+	}
+	bd_mmf_image[n-1].style.display = "block";
+	change_col3(0);
+}
+
+//Work page show column 3
+function change_col3(n) {
+	var bd_mmf_image = document.getElementsByClassName("mmf_bc_col_003_dat");
+	for (i = 0; i < bd_mmf_image.length; i++) {
+	  	bd_mmf_image[i].style.display = "none";
+	}
+	bd_mmf_image[n-1].style.display = "block";
+}
+
+//Show Menu when width<800px
+function mmf_pot_menu() {
+	var mmf_menu = document.getElementsByClassName("mmf_menu_bar");
+	if (menu==false) {
+		menu=true;
+		mmf_menu[0].style.left = '0vw';
+	}
+	else {
+		menu=false;
+		mmf_menu[0].style.left = '-100vw';
+	}
+}
 
 function Timer(fn, t) {
     var timerObj = setInterval(fn, t);
@@ -33,7 +80,7 @@ document.getElementById("mmf_body_slide_003").onmousedown = function(){timer.sto
 document.getElementById("mmf_body_slide_003").onmouseout = function(){timer.start()};
 
 function startup() {
-	timer.reset(5000);
+	change_slide(0);
 }
 
 function change_index(ind) {
@@ -44,7 +91,7 @@ function change_index(ind) {
 }
 
 function change_slide(ind) {
-	timer.reset(5000);
+	timer.reset(10000);
 	slides = document.getElementsByClassName("mmf_body_slide");
 	slide_cntrl = document.getElementsByClassName("mmf_body_slide_control");
 	for (i = 1; i < slide_cntrl.length-1; i++) {
