@@ -321,16 +321,16 @@ Product Data
 div.mmf_body_work {
     display: block;
 	position: absolute;
-	margin: 90px 0 0 160px;
-	width: -webkit-calc(100vw - 160px);
-	width: -moz-calc(100vw - 160px);
-	width: calc(100vw - 160px);
-	height: -webkit-calc(100vh - 180px);
-	height: -moz-calc(100vh - 180px);
-	height: calc(100vh - 180px);
+	margin: 40px 0 0 150px;
+	width: -webkit-calc(100vw - 150px);
+	width: -moz-calc(100vw - 150px);
+	width: calc(100vw - 150px);
+	height: -webkit-calc(100vh - 40px);
+	height: -moz-calc(100vh - 40px);
+	height: calc(100vh - 40px);
+	min-width:650px;
+	min-height:560px;
 	color: rgba(180,180,180,1);
-	min-width:640px;
-	min-height:640px;
 	text-align: center;
     overflow:hidden;
 }
@@ -339,15 +339,14 @@ div.mmf_bc_col {
     display: inline-block;
 	position: relative;
 	width: 25vw;
-	height: -webkit-calc(100vh - 180px);
-	height: -moz-calc(100vh - 180px);
-	height: calc(100vh - 180px);
-	min-width:200px;
-	min-height:600px;
+	height: -webkit-calc(100vh - 40px);
+	height: -moz-calc(100vh - 40px);
+	height: calc(100vh - 40px);
+	min-width:210px;
+	min-height:560px;
 	color: rgba(180,180,180,1);
 	text-align: center;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: hidden;
   	background-color: rgba(0,0,0,1);
 	background-size: 100% 100%;
 	margin: auto;
@@ -364,30 +363,33 @@ div.mmf_bc_col_001_dat {
 	position: relative;
 	margin: 0;
 	width: 25vw;
-	min-width:200px;
-	height: -webkit-calc(100vh - 185px);
-	height: -moz-calc(100vh - 185px);
-	height: calc(100vh - 185px);
-	min-height:595px;
+	min-width:210px;
+	height: -webkit-calc(100vh - 40px);
+	height: -moz-calc(100vh - 40px);
+	height: calc(100vh - 40px);
+	min-height:555px;
 	color: rgba(180,180,180,1);
 	text-align: center;
     overflow: hidden;
-  	background-color: rgba(0,0,0,1);
-	background-size: 100% 100%;
 	float: left;
 }
 
-div.mmf_bc_col_001_row {
+div.mmf_bc_col_row {
 	cursor:pointer;
     display: block;
 	position: relative;
-	width: 20vw;
-	min-width:200px;
-	padding: 30px;
-	font-size: 30px;
-	margin: .75vw auto;
+	width: 25vw;
+	min-width:210px;
+	padding: 2vw 0;
+	font-size: 2vw;
+	margin: .75vw 0 auto;
 	color: rgba(255,255,255,1);
 	text-align: center;
+}
+
+div.f_s_3 {
+	padding: 3vw 0;
+	font-size: 3vw;
 }
 
 div.mmf_bc_col_002_dat {
@@ -395,32 +397,15 @@ div.mmf_bc_col_002_dat {
 	position: relative;
 	margin: 0;
 	width: 25vw;
-	min-width:200px;
-	height: -webkit-calc(100vh - 185px);
-	height: -moz-calc(100vh - 185px);
-	height: calc(100vh - 185px);
-	min-height:595px;
+	min-width:210px;
+	height: -webkit-calc(100vh - 40px);
+	height: -moz-calc(100vh - 40px);
+	height: calc(100vh - 40px);
+	min-height:555px;
 	color: rgba(180,180,180,1);
 	text-align: center;
     overflow: hidden;
-  	background-color: rgba(0,0,0,1);
-	background-size: 100% 100%;
-    overflow-y: auto;
-	overflow-x: hidden;
 	float: left;
-}
-
-div.mmf_bc_col_002_row {
-	cursor:pointer;
-    display: block;
-	position: relative;
-	width: 20vw;
-	min-width:200px;
-	padding: 30px;
-	font-size: 20px;
-	margin: .75vw auto;
-	color: rgba(255,255,255,1);
-	text-align: center;
 }
 
 div.mmf_bc_col_003_dat {
@@ -428,22 +413,21 @@ div.mmf_bc_col_003_dat {
 	position: relative;
 	margin: 0;
 	width: 25vw;
-	min-width:200px;
-	height: -webkit-calc(100vh - 185px);
-	height: -moz-calc(100vh - 185px);
-	height: calc(100vh - 185px);
-	min-height:595px;
-	color: rgba(255,255,255,1);
-	text-align: left;
+	min-width:210px;
+	height: -webkit-calc(100vh - 40px);
+	height: -moz-calc(100vh - 40px);
+	height: calc(100vh - 40px);
+	min-height:555px;
+	color: rgba(180,180,180,1);
+    overflow: hidden;
     overflow-y: auto;
 	overflow-x: hidden;
-	font-size: 20px;
-  	background-color: rgba(0,0,0,1);
-	background-size: 100% 100%;
 	float: left;
+	text-align: left;
+	font-size: 2vw;
 }
 
-div.mmf_bc_col_001_row:hover, div.mmf_bc_col_002_row:hover, div.mmf_bc_col_003_row:hover {
+div.mmf_bc_col_row:hover {
 	background-color: rgba(255,255,255,1);
 	color: rgba(0,0,0,1);
 }
@@ -523,6 +507,19 @@ input:focus {
 /****************************
 Overload Data
 *****************************/
+
+@media only screen and (min-width: 1200px) {
+  /* For lowest resolution layouts */  
+	input[type=text], input[type=email], input[type=tel], input[type=submit], select, textarea {
+		font-size: 15px;
+		padding: 10px;
+	}
+	div.mmf_iso {
+		display: none;
+	}
+}
+
+
 @media only screen and (max-height: 700px) {
   /* For lowest resolution layouts */  
 	input[type=text], input[type=email], input[type=tel], input[type=submit], select, textarea {

@@ -23,7 +23,7 @@ function change_col2(n) {
 	for (i = 0; i < bd_mmf_image.length; i++) {
 	  	bd_mmf_image[i].style.display = "none";
 	}
-	bd_mmf_image[n-1].style.display = "block";
+	bd_mmf_image[n-1].style.display = "inline-block";
 	change_col3(0);
 }
 
@@ -33,7 +33,7 @@ function change_col3(n) {
 	for (i = 0; i < bd_mmf_image.length; i++) {
 	  	bd_mmf_image[i].style.display = "none";
 	}
-	bd_mmf_image[n-1].style.display = "block";
+	bd_mmf_image[n-1].style.display = "inline-block";
 }
 
 //Show Menu when width<800px
