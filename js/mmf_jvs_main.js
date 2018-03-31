@@ -1,7 +1,7 @@
 var sld = 2;
 var def_ind = 0;
 var timer = new Timer(function() {change_index(1);}, 10000);
-var mm_wd = window.matchMedia( "(min-width: 800px)" );
+//var mm_wd = window.matchMedia( "(min-width: 800px)" );
 var menu = false;
 
 mm_wd.addListener(function(mmwd) {
