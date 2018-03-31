@@ -53,7 +53,7 @@ body {
 }
 
 /* landscape part 1*/
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) and (min-width: 800px) {
 	/* landscape-specific styles */
 	
 /****************************
@@ -243,7 +243,7 @@ div.mmf_body_content {
 	min-height:560px;
 	color: rgba(180,180,180,1);
 	text-align: center;
-    overflow:auto;
+    overflow:hidden;
 }
 
 div.mmf_body_slide{
@@ -469,9 +469,9 @@ table.mmf_bc_form td {
 Form Data
 *****************************/
 input[type=text], input[type=email], input[type=tel], input[type=submit], select, textarea {
-    width: -webkit-calc(100% - 40px);
-    width: -moz-calc(100% - 40px);
-    width: calc(100% - 40px);
+    width: -webkit-calc(100% - 30px);
+    width: -moz-calc(100% - 30px);
+    width: calc(100% - 30px);
     display: inline-block;
 	position: relative;
     border: 0;
@@ -523,49 +523,24 @@ input:focus {
 /****************************
 Overload Data
 *****************************/
-@media only screen and (max-width: 1200px) {
-  /* For lowest resolution layouts */
-	span.mmf_tb_tag {
-		font-size: 12px;
+@media only screen and (max-height: 700px) {
+  /* For lowest resolution layouts */  
+	input[type=text], input[type=email], input[type=tel], input[type=submit], select, textarea {
+		font-size: 15px;
+		padding: 10px;
 	}
 	div.mmf_iso {
 		display: none;
-	}
-	div.mmf_body_content {
-		height: -webkit-calc(100vh - 100px);
-		height: -moz-calc(100vh - 100px);
-		height: calc(100vh - 100px);
-	}
-	div.mmf_body_work {
-		margin: 40px 0 0 160px;
-		overflow:auto;
-	}
-	div.mmf_bc_col_001_row {
-		text-align: left;
-	}
-	div.mmf_bc_col_002_row {
-		text-align: left;
 	}
 }
 
 @media only screen and (max-height: 600px) {
   /* For lowest resolution layouts */
-	div.mmf_iso {
-		display: none;
-	}
 	div.mmf_bc_btn_data {
 		font-size: 20px;
 	}
 	#mmf_bc_data{
 		font-size: 20px;
-	}
-	input[type=text], input[type=email], input[type=tel], input[type=submit], select, textarea {
-		font-size: 10px;
-		padding: 10px;
-	}
-	div.mmf_body_work {
-		margin: 60px 0 0 160px;
-		overflow:auto;
 	}
 	div.mmf_bc_col_002_row {
 		padding: 20px;
